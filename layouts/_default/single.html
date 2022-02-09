@@ -36,9 +36,9 @@
   {{- end }}
 
   <footer class="post-footer">
-    {{- if .Params.tags }}
+    {{- if .Params.categories }}
     <ul class="post-tags">
-      {{- range ($.GetTerms "tags") }}
+      {{- range ($.GetTerms "categories") }}
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>

@@ -1,11 +1,21 @@
 {{- /* Comments area start */ -}}
 {{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+{{ $hyvor_site_id := 0 }}
+{{ $post_id := false }}
+
+{{ if .Site.Params.hyvorId }}
+	{{ $hyvor_site_id = .Site.Params.hyvorId }}
+{{ end }}
+
+{{ if .Params.slug }}
+	{{ $post_id = (printf "/%s" .Params.slug) }}
+{{ end }}
 <div id="hyvor-talk-view"></div>
 <script type="text/javascript">
-    var HYVOR_TALK_WEBSITE = 6494;
+    var HYVOR_TALK_WEBSITE = {{ $hyvor_site_id }};
     var HYVOR_TALK_CONFIG = {
         url: false,
-        id: false
+        id: {{ $post_id }}
     };
 </script>
 <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed.js"></script>

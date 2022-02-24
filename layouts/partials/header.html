@@ -32,8 +32,19 @@
 {{- /* theme-toggle is disabled and theme is auto */}}
 {{- else if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark"))}}
 <script>
+    var HYVOR_TALK_PALETTE = null
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
+        HYVOR_TALK_PALETTE = {
+            accent: "#ffffff",
+            accentText: "#000000",
+            footerHeader: "#1b1818",
+            footerHeaderText: "#cac7c7",
+            box: "#37383e",
+            boxText: "#ffffff",
+            boxLightText: "#aaaaaa",
+            backgroundText: "#ffffff"
+        };
     }
 
 </script>

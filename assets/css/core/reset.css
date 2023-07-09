@@ -122,3 +122,4 @@ img {
 .list:not(.dark)::-webkit-scrollbar-thumb {
     border: 5px solid var(--code-bg);
 }
+

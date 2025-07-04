@@ -31,7 +31,7 @@
 }
 
 .post-content :not(table) ::-webkit-scrollbar-thumb {
-    border: 2px solid var(--hljs-bg);
+    border: 2px solid var(--code-block-bg);
     background: rgb(113, 113, 117);
 }
 
@@ -50,4 +50,14 @@
 
 .post-content table::-webkit-scrollbar-thumb {
     border-width: 2px;
+}
+
+/* from zmedia */
+@media screen and (min-width: 768px) {
+
+    /* reset */
+    ::-webkit-scrollbar {
+        width: 19px;
+        height: 11px;
+    }
 }
